@@ -1,6 +1,5 @@
 import React from "react";
-import Bg1 from "../../assets/Bg1.png";
-import Logo from "../../assets/logo1.png";
+import Bg1 from "/assets/Bg1.png";
 
 export const Home = () => {
   return (
@@ -11,7 +10,11 @@ export const Home = () => {
     >
       <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-20 lg:px-40">
         <div className="flex items-center gap-4 mb-[10rem]">
-          <img src={Logo} alt="Logo" className="w-32 md:w-60 lg:w-98" />
+          <img
+            src="/assets/logo.png"
+            alt="Logo"
+            className="w-32 md:w-60 lg:w-98"
+          />
 
           <div className="flex flex-col">
             <h1 className="text-[1.8rem] md:text-[2rem] lg:text-[3.2rem] font-bold text-gray-800">

@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TfiArrowCircleRight } from "react-icons/tfi";
-import Photo1 from "../../assets/Photo1.jpg";
-import Photo2 from "../../assets/Photo2.jpg";
-import Photo4 from "../../assets/Photo4.jpg";
-import Photo5 from "../../assets/Photo5.jpg";
 
 export const Gallery = () => {
   return (
@@ -18,28 +14,28 @@ export const Gallery = () => {
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 font-yanone">
         <div className="flex flex-col items-center">
           <img
-            src={Photo5}
+            src="/assets/Photo5.jpg"
             alt="Project 1"
             className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
           />
         </div>
         <div className="flex flex-col items-center">
           <img
-            src={Photo1}
+            src="/assets/Photo1.jpg"
             alt="Project 2"
             className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
           />
         </div>
         <div className="flex flex-col items-center">
           <img
-            src={Photo4}
+            src="/assets/Photo4.jpg"
             alt="Project 3"
             className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
           />
         </div>
         <div className="flex flex-col items-center">
           <img
-            src={Photo2}
+            src="/assets/Photo2.jpg"
             alt="Project 4"
             className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
           />

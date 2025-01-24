@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { Projects } from "./pages/Projects/Projects.jsx";
 import { MainContent } from "./components/MainContent/MainContent.jsx";
+import CookieConsent from "./components/Cookies/CookieConsent.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
+      <CookieConsent />
     </Router>
   );
 }

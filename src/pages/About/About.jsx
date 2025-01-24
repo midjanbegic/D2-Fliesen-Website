@@ -1,5 +1,4 @@
 import React from "react";
-import UserImage from "../../assets/User_Image.png";
 
 export const About = () => {
   return (
@@ -8,7 +7,7 @@ export const About = () => {
       <h2 className="text-center text-5xl font-yanone">Über uns</h2>
       <div className="flex flex-col lg:flex-row items-center gap-20 my-20">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none lg:ml-auto mb-6 lg:mb-0">
-          <img src={UserImage} alt="user" className="w-72 rounded-3xl" />
+          <img src="/assets/User_Image.png" alt="user" className="w-72 rounded-3xl" />
         </div>
 
         <div className="flex-l lg:mr-auto">

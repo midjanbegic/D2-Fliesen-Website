@@ -1,6 +1,4 @@
 import React from "react";
-import Otto from "../../assets/OTTO.png";
-import Rywa from "../../assets/RYWA.png";
 
 const Footer = () => {
   return (
@@ -42,7 +40,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="#gallery" className="hover:underline text-gray-300">
-                Projekte
+                Gallery
               </a>
             </li>
             <li>
@@ -56,12 +54,12 @@ const Footer = () => {
           <h2 className="text-2xl font-bold mb-4 text-white">Partner</h2>
           <ul className="flex flex-col space-y-4 justify-center md:justify-start">
             <img
-              src={Otto}
+              src="/assets/OTTO.png"
               alt="Otto"
               className="h-10 md:h-10 w-[6rem] max-w-full"
             />
             <img
-              src={Rywa}
+              src="/assets/RYWA.png"
               alt="Rywa"
               className="h-10 md:h-8 w-[8rem] max-w-full"
             />
