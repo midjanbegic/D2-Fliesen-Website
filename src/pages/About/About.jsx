@@ -48,7 +48,7 @@ export const About = () => {
           <p className="text-[1.2rem] text-gray-800">
             Die D2 Fliesen gibt es seit über 20 Jahren.
             <br />
-            Wir arbeiten vor allem in Dortmun und Hamm.
+            Wir arbeiten vor allem in Dortmund und Hamm.
           </p>
         </div>
         <div className="bg-orange-300 p-6 rounded-lg shadow-lg w-full lg:w-1/3 text-center">
@@ -56,9 +56,9 @@ export const About = () => {
             Hohe Kundenzufriedenheit
           </h3>
           <p className="text-[1.2rem] text-gray-800">
-            Wir arbeiten nach den höchsten Standards.
+          Wir legen großen Wert auf höchste Standards.
             <br />
-            Sie werden davon profitieren.
+            Sie werden die Qualität deutlich spüren.
           </p>
         </div>
         <div className="bg-orange-300 p-6 rounded-lg shadow-lg w-full lg:w-1/3 text-center">
@@ -66,9 +66,9 @@ export const About = () => {
             Schnelle Realisierung
           </h3>
           <p className="text-[1.2rem] text-gray-800">
-            Unsere eingespielten Teams arbeiten effizient.
+          Unsere professionellen Teams sorgen für reibungslose Abläufe.
             <br />
-            Lassen Sie sich überzeugen.
+            Überzeugen Sie sich selbst.
           </p>
         </div>
       </div>
