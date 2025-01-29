@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { TfiArrowCircleRight } from "react-icons/tfi";
+import { MdArrowForward } from "react-icons/md";
+import { useSwipeable } from "react-swipeable";
 
 export const Gallery = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    { src: "/assets/Photo5.jpg", alt: "Project 1" },
+    { src: "/assets/Photo1.jpg", alt: "Project 2" },
+    { src: "/assets/Photo4.jpg", alt: "Project 3" },
+    { src: "/assets/Photo2.jpg", alt: "Project 4" },
+  ];
+
+  const openLightbox = (index) => {
+    setCurrentImageIndex(index);
+    setIsOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  // Handlers for swipe gestures
+  const handlers = useSwipeable({
+    onSwipedLeft: nextImage,
+    onSwipedRight: prevImage,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
     <div id="gallery" className="py-10">
       <div className="text-center mb-16 font-yanone">
@@ -12,34 +51,19 @@ export const Gallery = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 font-yanone">
-        <div className="flex flex-col items-center">
-          <img
-            src="/assets/Photo5.jpg"
-            alt="Project 1"
-            className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
-          />
-        </div>
-        <div className="flex flex-col items-center">
-          <img
-            src="/assets/Photo1.jpg"
-            alt="Project 2"
-            className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
-          />
-        </div>
-        <div className="flex flex-col items-center">
-          <img
-            src="/assets/Photo4.jpg"
-            alt="Project 3"
-            className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
-          />
-        </div>
-        <div className="flex flex-col items-center">
-          <img
-            src="/assets/Photo2.jpg"
-            alt="Project 4"
-            className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
-          />
-        </div>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center cursor-pointer"
+            onClick={() => openLightbox(index)}
+          >
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="max-w-[13rem] max-h-[20rem] object-contain rounded-lg transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+            />
+          </div>
+        ))}
       </div>
 
       <div className="flex justify-center mt-8 font-yanone">
@@ -55,6 +79,45 @@ export const Gallery = () => {
           </button>
         </Link>
       </div>
+
+      {/* Lightbox */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeLightbox} // Close lightbox on background click
+        >
+          <div
+            {...handlers} // Attach swipe handlers
+            className="relative flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the content
+          >
+            <img
+              src={images[currentImageIndex].src}
+              alt={images[currentImageIndex].alt}
+              className="max-w-full max-h-screen object-contain rounded-lg"
+            />
+
+            {/* Left Arrow */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+            >
+              <MdArrowForward
+                size={18}
+                className="rotate-180" // Rotate icon for left arrow
+              />
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
+            >
+              <MdArrowForward size={18} />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

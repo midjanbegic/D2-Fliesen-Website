@@ -21,7 +21,7 @@ const CookieConsent = () => {
         onClick={handleAccept}
         className="bg-gray-800 text-orange-300 px-4 py-2 rounded-lg hover:bg-gray-700"
       >
-        Erlauben cookies
+        Cookies erlauben
       </button>
     </div>
   );

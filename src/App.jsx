@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import { Projects } from "./pages/Projects/Projects.jsx";
 import { MainContent } from "./components/MainContent/MainContent.jsx";
 import CookieConsent from "./components/Cookies/CookieConsent.jsx";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </Routes>
       <Footer />
       <CookieConsent />
+      <ScrollToTop />
     </Router>
   );
 }

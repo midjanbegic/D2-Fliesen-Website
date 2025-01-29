@@ -1,52 +1,68 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 px-4 md:px-16 lg:px-28 font-yanone py-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h2 className="text-2xl font-bold mb-4 text-white">Über uns</h2>
           <p className="text-gray-300">
             Über 20 Jahre Erfahrung. Ihre Wünsche, unsere Ausführung.
           </p>
           <p className="text-gray-300">
-            <strong className="text-orange-300">Email: </strong> d2-fliesen@gmx.de
+            <strong className="text-orange-300">Email: </strong>{" "}
+            d2-fliesen@gmx.de
           </p>
           <p className="text-gray-300">
-            <strong className="text-orange-300">Telefon: </strong> +49 177 3054060
+            <strong className="text-orange-300">Telefon: </strong> +49 177
+            3504060
           </p>
           <p className="text-gray-300">
-            <strong className="text-orange-300">Adresse: </strong> Ahlener Str. 31, 59073 Hamm
+            <strong className="text-orange-300">Adresse: </strong> Ahlener Str.
+            31, 59073 Hamm
           </p>
-          <p className="text-gray-300"><strong className="text-orange-300">Steuernummer:</strong> USt-IdNr. DE348627868</p>
+          <p className="text-gray-300">
+            <strong className="text-orange-300">Steuernummer:</strong> USt-IdNr.
+            DE348627868
+          </p>
         </div>
         <div>
           <h2 className="text-2xl font-bold mb-4 text-white">Links</h2>
           <ul>
             <li>
-              <a href="/" className="hover:underline text-gray-300">
+              <HashLink to="/#home" className="hover:underline text-gray-300">
                 Home
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#about" className="hover:underline text-gray-300">
+              <HashLink to="/#about" className="hover:underline text-gray-300">
                 Über uns
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#services" className="hover:underline text-gray-300">
+              <HashLink
+                to="/#services"
+                className="hover:underline text-gray-300"
+              >
                 Services
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#gallery" className="hover:underline text-gray-300">
+              <HashLink
+                to="/#gallery"
+                className="hover:underline text-gray-300"
+              >
                 Gallery
-              </a>
+              </HashLink>
             </li>
             <li>
-              <a href="#contact" className="hover:underline text-gray-300">
+              <HashLink
+                to="/#contact"
+                className="hover:underline text-gray-300"
+              >
                 Kontakt
-              </a>
+              </HashLink>
             </li>
           </ul>
         </div>

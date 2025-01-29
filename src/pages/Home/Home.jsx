@@ -21,7 +21,8 @@ export const Home = () => {
               D2 Fliesen
             </h1>
             <h2 className="text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] font-medium font-bold font-playfair text-gray-600">
-              Fliesen Experte aus Hamm
+              <span>Fliesen </span>
+              <span className="text-orange-300">Experte aus Hamm</span>
             </h2>
             <h3 className="text-[1rem] md:text-[1.2rem] lg:text-[1.5rem] font-medium font-bold text-gray-800">
               Telefon:
@@ -29,7 +30,7 @@ export const Home = () => {
                 href="tel:+491773054060"
                 className="text-orange-300 hover:underline"
               >
-                +49 177 3054060
+                +49 177 3504060
               </a>
             </h3>
           </div>
