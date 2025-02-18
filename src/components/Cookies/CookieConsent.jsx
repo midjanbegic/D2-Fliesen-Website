@@ -13,7 +13,7 @@ const CookieConsent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full sm:top-0 sm:bottom-auto bg-orange-300 text-gray-800 py-4 px-6 flex justify-between items-center z-50">
+    <div className="fixed bottom-0 left-0 w-full bg-orange-300 text-gray-800 py-4 px-6 flex justify-between items-center z-50">
       <div className="text-lg">
         Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern.
       </div>

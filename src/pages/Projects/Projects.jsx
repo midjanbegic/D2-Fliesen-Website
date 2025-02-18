@@ -111,7 +111,6 @@ export const Projects = () => {
               alt="Selected"
               className="w-full h-auto rounded-lg"
             />
-            {/* Previous Button */}
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
@@ -120,7 +119,6 @@ export const Projects = () => {
               className="rotate-180"
               />
             </button>
-            {/* Next Button */}
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"

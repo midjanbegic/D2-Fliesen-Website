@@ -15,8 +15,10 @@ const Footer = () => {
             d2-fliesen@gmx.de
           </p>
           <p className="text-gray-300">
-            <strong className="text-orange-300">Telefon: </strong> +49 177
-            3504060
+            <strong className="text-orange-300">Telefon: </strong>{" "}
+            <a href="tel:+491773504060" className="hover:underline text-gray-300">
+              +49 177 3504060
+            </a>
           </p>
           <p className="text-gray-300">
             <strong className="text-orange-300">Adresse: </strong> Ahlener Str.

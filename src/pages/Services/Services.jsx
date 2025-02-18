@@ -45,7 +45,7 @@ export const Services = () => {
     const currentScroll = window.scrollY;
     const currentDirection = currentScroll > window.lastScrollY ? "down" : "up";
     setScrollDirection(currentDirection);
-    window.lastScrollY = currentScroll <= 0 ? 0 : currentScroll; // Update last scroll position
+    window.lastScrollY = currentScroll <= 0 ? 0 : currentScroll;
   };
 
   useEffect(() => {
@@ -74,13 +74,11 @@ export const Services = () => {
   return (
     <div id="services" className="bg-white py-12 font-yanone mt-32 pb-32">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Hero Section */}
         <div className="text-center mb-16">
           <p className="mt-6 text-xl text-gray-600">Über Fliesenlegen</p>
           <h1 className="text-5xl font-bold text-gray-900">Was wir genau machen ?</h1>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {services.map((service, index) => (
             <motion.div
@@ -88,7 +86,7 @@ export const Services = () => {
               variants={handleVisibility(index)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }} // Trigger when 20% is visible
+              viewport={{ once: false, amount: 0.3 }}
               className="bg-white shadow-2xl rounded-lg p-8 flex flex-col items-center transform transition-all duration-300 hover:scale-105"
             >
               <div className="mb-4">{service.icon}</div>

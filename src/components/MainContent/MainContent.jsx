@@ -3,7 +3,7 @@ import { Home } from "../../pages/Home/Home.jsx";
 import { About } from "../../pages/About/About.jsx";
 import { Services } from "../../pages/Services/Services";
 import { Gallery } from "../../pages/Gallery/Gallery";
-import ContactForm from "../../components/Contact/ContactForm";
+import { Contact } from "../Contact/Contact.jsx";
 
 export const MainContent = () => {
   return (
@@ -12,7 +12,7 @@ export const MainContent = () => {
       <About />
       <Services />
       <Gallery />
-      <ContactForm />
+      <Contact />
     </div>
   );
 };

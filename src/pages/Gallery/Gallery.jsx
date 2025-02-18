@@ -34,7 +34,6 @@ export const Gallery = () => {
     );
   };
 
-  // Handlers for swipe gestures
   const handlers = useSwipeable({
     onSwipedLeft: nextImage,
     onSwipedRight: prevImage,
@@ -80,16 +79,15 @@ export const Gallery = () => {
         </Link>
       </div>
 
-      {/* Lightbox */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={closeLightbox} // Close lightbox on background click
+          onClick={closeLightbox}
         >
           <div
-            {...handlers} // Attach swipe handlers
+            {...handlers}
             className="relative flex flex-col items-center"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the content
+            onClick={(e) => e.stopPropagation()}
           >
             <img
               src={images[currentImageIndex].src}
@@ -97,18 +95,16 @@ export const Gallery = () => {
               className="max-w-full max-h-screen object-contain rounded-lg"
             />
 
-            {/* Left Arrow */}
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
             >
               <MdArrowForward
                 size={18}
-                className="rotate-180" // Rotate icon for left arrow
+                className="rotate-180"
               />
             </button>
 
-            {/* Right Arrow */}
             <button
               onClick={nextImage}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700"
